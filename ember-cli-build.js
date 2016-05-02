@@ -7,6 +7,14 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('bower_components/admin-lte/bootstrap/css/bootstrap.css');
+  app.import('bower_components/admin-lte/dist/css/AdminLTE.css');
+  app.import('bower_components/admin-lte/dist/css/skins/skin-blue.css');
+
+  app.import('bower_components/admin-lte/plugins/jQuery/jQuery-2.2.0.min.js');
+  app.import('bower_components/admin-lte/bootstrap/js/bootstrap.js');
+  app.import('bower_components/admin-lte/dist/js/app.js');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
