@@ -15,8 +15,6 @@ module.exports = function(defaults) {
   app.import('bower_components/admin-lte/bootstrap/js/bootstrap.js');
   app.import('bower_components/admin-lte/dist/js/app.js');
 
-  app.import('bower_components/admin-lte/dist/img/user2-160x160.jpg');
-
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
