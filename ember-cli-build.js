@@ -7,26 +7,35 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  //we are using the admin-lte theme https://almsaeedstudio.com/
+  //use admin-lte dependencies if available to avoid conflict with the theme
+
+  //css dependencies
   app.import('bower_components/admin-lte/bootstrap/css/bootstrap.css');
+  app.import('bower_components/admin-lte/plugins/select2/select2.css');
+  app.import('bower_components/admin-lte/plugins/fullcalendar/fullcalendar.css');
   app.import('bower_components/admin-lte/dist/css/AdminLTE.css');
   app.import('bower_components/admin-lte/dist/css/skins/skin-blue.css');
 
+  //javascript dependencies -
   app.import('bower_components/admin-lte/plugins/jQuery/jQuery-2.2.0.min.js');
   app.import('bower_components/admin-lte/bootstrap/js/bootstrap.js');
-  app.import('bower_components/admin-lte/dist/js/app.js');
 
-  // Use `app.import` to add additional libraries to the generated
-  // output files.
-  //
-  // If you need to use different assets in different
-  // environments, specify an object as the first parameter. That
-  // object's keys should be the environment name and the values
-  // should be the asset to use in that environment.
-  //
-  // If the library that you are including contains AMD or ES6
-  // modules that you would like to import into your application
-  // please specify an object with the list of modules as keys
-  // along with the exports of each module as its value.
+  //The jQuery replacement for select boxes
+  app.import('bower_components/admin-lte/plugins/select2/select2.js');
+
+  //required for full-calendar
+  app.import('bower_components/moment/moment.js');
+
+  //FullCalendar is a drag-n-drop jQuery plugin for displaying events on a full-sized calendar.
+  app.import('bower_components/admin-lte/plugins/fullcalendar/fullcalendar.js');
+ 
+  //eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
+  app.import('bower_components/admin-lte/plugins/fastclick/fastclick.js');
+
+  //small jQuery plugin that transforms any div into a scrollable area with a nice scrollbar
+  app.import('bower_components/admin-lte/plugins/slimscroll/jquery.slimscroll.js');
+  app.import('bower_components/admin-lte/dist/js/app.js');
 
   return app.toTree();
 };
