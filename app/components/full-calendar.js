@@ -31,14 +31,14 @@ export default Ember.Component.extend({
         //Random default events
         events: [
           {
-            title: 'Design -  8/54',
+            title: 'Design - 8/54',
             start: new Date(y, m, d + 1),
             allDay: true,
-            backgroundColor: "#f56954", //red
-            borderColor: "#f56954" //red
+            backgroundColor: "#00c0ef", //red
+            borderColor: "#00c0ef" //red
           },
           {
-            title: 'Audit -  6/16',
+            title: 'Audit - 6/16',
             start: new Date(y, m, d + 1),
             allDay: true,
             backgroundColor: "#f56954", //red
