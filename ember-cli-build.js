@@ -29,12 +29,12 @@ module.exports = function(defaults) {
 
   //FullCalendar is a drag-n-drop jQuery plugin for displaying events on a full-sized calendar.
   app.import('bower_components/admin-lte/plugins/fullcalendar/fullcalendar.js');
- 
+
   //eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
   app.import('bower_components/admin-lte/plugins/fastclick/fastclick.js');
 
   //small jQuery plugin that transforms any div into a scrollable area with a nice scrollbar
-  app.import('bower_components/admin-lte/plugins/slimscroll/jquery.slimscroll.js');
+  app.import('bower_components/admin-lte/plugins/slimScroll/jquery.slimscroll.js');
   app.import('bower_components/admin-lte/dist/js/app.js');
 
   return app.toTree();
