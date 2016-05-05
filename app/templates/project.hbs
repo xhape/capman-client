@@ -4,7 +4,7 @@
 <section class="content">
   <div class="row">
     <!-- Left col -->
-    <div class="col-md-12">
+    <div class="col-md-8">
 
       <!-- TABLE: Recently Added Projects -->
       <div class="box box-info">
@@ -37,26 +37,6 @@
                 <td>Stanford</td>
                 <td><span class="label bg-aqua">Audit</span></td>
               </tr>
-              <tr>
-                <td><a href="pages/examples/invoice.html">129845</a></td>
-                <td>Samsung Smart TV</td>
-                <td><span class="label label-info">Open</span></td>
-              </tr>
-              <tr>
-                <td><a href="pages/examples/invoice.html">129845</a></td>
-                <td>Samsung Smart TV</td>
-                <td><span class="label label-warning">Waitlisted</span></td>
-              </tr>
-              <tr>
-                <td><a href="pages/examples/invoice.html">OR7429</a></td>
-                <td>iPhone 6 Plus</td>
-                <td><span class="label label-danger">Closed</span></td>
-              </tr>
-              <tr>
-                <td><a href="pages/examples/invoice.html">OR9842</a></td>
-                <td>Call of Duty IV</td>
-                <td><span class="label label-success">In Progress</span></td>
-              </tr>
               </tbody>
             </table>
           </div>
@@ -67,6 +47,23 @@
       <!-- /.box -->
     </div>
     <!-- /.col -->
+
+    <div class="col-md-4">
+      <div class="box box-pane">
+        <div class="box-body">
+          {{office-multiple-select}}
+          {{team-multiple-select}}
+          {{client-multiple-select}}
+          {{date-range-picker}}
+        </div>
+        <!-- /.box-body -->
+
+        <div class="box-footer">
+          <button type="submit" class="btn btn-primary pull-right">Search</button>
+        </div>
+        <!-- /.box-footer -->
+      </div>
+    </div>
   </div>
   <!-- /.row -->
 </section>

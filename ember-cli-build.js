@@ -14,6 +14,7 @@ module.exports = function(defaults) {
   app.import('bower_components/admin-lte/bootstrap/css/bootstrap.css');
   app.import('bower_components/admin-lte/plugins/select2/select2.css');
   app.import('bower_components/admin-lte/plugins/fullcalendar/fullcalendar.css');
+  app.import('bower_components/admin-lte/plugins/daterangepicker/daterangepicker-bs3.css');
   app.import('bower_components/admin-lte/dist/css/AdminLTE.css');
   app.import('bower_components/admin-lte/dist/css/skins/skin-blue.css');
 
@@ -29,6 +30,9 @@ module.exports = function(defaults) {
 
   //FullCalendar is a drag-n-drop jQuery plugin for displaying events on a full-sized calendar.
   app.import('bower_components/admin-lte/plugins/fullcalendar/fullcalendar.js');
+
+  //for picking up date range
+  app.import('bower_components/admin-lte/plugins/daterangepicker/daterangepicker.js');
 
   //eliminating the 300ms delay between a physical tap and the firing of a click event on mobile browsers
   app.import('bower_components/admin-lte/plugins/fastclick/fastclick.js');
