@@ -16,11 +16,12 @@ export default Ember.Component.extend({
           right: 'month,basicWeek,basicDay'
         },
         buttonText: {
-          today: 'today',
-          month: 'month',
-          week: 'week',
-          day: 'day'
+          today: 'Today',
+          month: 'Monthly',
+          week: 'Weekly',
+          day: 'Daily'
         },
+
         //Random default events
         events: [
           {
