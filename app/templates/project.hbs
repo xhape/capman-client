@@ -3,6 +3,18 @@
 <!-- Main content -->
 <section class="content">
   <div class="row">
+    <div class="col-md-4">
+      <div class="box box-pane">
+        <div class="box-body">
+          {{office-multiple-select offices=model.offices}}
+          {{team-multiple-select}}
+          {{client-multiple-select}}
+          {{date-range-picker}}
+        </div>
+        <!-- /.box-body -->
+      </div>
+    </div>
+
     <!-- Left col -->
     <div class="col-md-8">
 
@@ -47,23 +59,6 @@
       <!-- /.box -->
     </div>
     <!-- /.col -->
-
-    <div class="col-md-4">
-      <div class="box box-pane">
-        <div class="box-body">
-          {{office-multiple-select}}
-          {{team-multiple-select}}
-          {{client-multiple-select}}
-          {{date-range-picker}}
-        </div>
-        <!-- /.box-body -->
-
-        <div class="box-footer">
-          <button type="submit" class="btn btn-primary pull-right">Search</button>
-        </div>
-        <!-- /.box-footer -->
-      </div>
-    </div>
   </div>
   <!-- /.row -->
 </section>

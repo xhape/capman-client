@@ -1,7 +1,67 @@
-{{application-content-header title="Dashboard"}}
+{{application-content-header title="Dashboard" subTitle="South Bay"}}
 
 <!-- Main content -->
 <section class="content">
+
+  <!-- Info boxes -->
+  <div class="row">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-aqua"><i class="fa fa-paint-brush"></i></span>
+
+        <div class="info-box-content">
+          <span class="info-box-text">Projects</span>
+          <span class="info-box-number">50</span>
+
+          {{#link-to "project" class="info-box-more"}}
+            More info <i class="fa fa-arrow-circle-right"></i>
+          {{/link-to}}
+        </div>
+        <!-- /.info-box-content -->
+      </div>
+      <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+    <div class="col-md-4 col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-red"><i class="ion-ios-time-outline"></i></span>
+
+        <div class="info-box-content">
+          <span class="info-box-text">Wait List</span>
+          <span class="info-box-number">5</span>
+
+          {{#link-to "project" class="info-box-more"}}
+            More info <i class="fa fa-arrow-circle-right"></i>
+          {{/link-to}}
+        </div>
+        <!-- /.info-box-content -->
+      </div>
+      <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+
+    <!-- /.col -->
+    <div class="col-md-4   col-sm-6 col-xs-12">
+      <div class="info-box">
+        <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
+
+        <div class="info-box-content">
+          <span class="info-box-text">Leaves</span>
+          <span class="info-box-number">0</span>
+
+          {{#link-to "leave" class="info-box-more"}}
+            More info <i class="fa fa-arrow-circle-right"></i>
+          {{/link-to}}
+        </div>
+
+        <!-- /.info-box-content -->
+      </div>
+      <!-- /.info-box -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+
 
   <!-- South Bay Capacity-->
   <div class="row">
@@ -133,122 +193,6 @@
       <!-- /.box -->
     </div>
     <!-- /.col -->
-  </div>
-  <!-- /.row -->
-
-  <div class="row">
-    <!-- Left col -->
-    <div class="col-md-6">
-
-      <!-- TABLE: Recently Added Projects -->
-      <div class="box box-info">
-        <div class="box-header with-border">
-          <h3 class="box-title">Today's Project</h3>
-
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                class="fa fa-minus"></i>
-            </button>
-          </div>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div class="table-responsive">
-            <table class="table no-margin">
-              <thead>
-              <tr>
-                <th>PID</th>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Hours</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td><a href="pages/examples/invoice.html">129842</a></td>
-                <td>Google</td>
-                <td>
-                  <span class="label bg-green">Design</span>
-                  <span class="label bg-aqua">Audit</span>
-                </td>
-                <td>18</td>
-              </tr>
-              <tr>
-                <td><a href="pages/examples/invoice.html">129843</a></td>
-                <td>LinkedIn</td>
-                <td><span class="label bg-green">Design</span></td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td><a href="pages/examples/invoice.html">129844</a></td>
-                <td>Stanford</td>
-                <td><span class="label bg-aqua">Audit</span></td>
-                <td>12</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- /.table-responsive -->
-        </div>
-        <!-- /.box-body -->
-      </div>
-      <!-- /.box -->
-    </div>
-    <!-- /.col -->
-
-    <!-- Right col -->
-    <div class="col-md-6">
-
-      <!-- TABLE: Recently Added Projects -->
-      <div class="box box-info">
-        <div class="box-header with-border">
-          <h3 class="box-title">Waitlisted Project</h3>
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
-                class="fa fa-minus"></i>
-            </button>
-          </div>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div class="table-responsive">
-            <table class="table no-margin">
-              <thead>
-              <tr>
-                <th>PID</th>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Hours</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td><a href="pages/examples/invoice.html">129842</a></td>
-                <td>Google</td>
-                <td>
-                  <span class="label bg-green">Design</span>
-                  <span class="label bg-aqua">Audit</span>
-                </td>
-                <td>6</td>
-              </tr>
-              <tr>
-                <td><a href="pages/examples/invoice.html">129843</a></td>
-                <td>LinkedIn</td>
-                <td><span class="label bg-green">Design</span></td>
-                <td>3</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- /.table-responsive -->
-        </div>
-        <!-- /.box-body -->
-      </div>
-      <!-- /.box -->
-    </div>
-    <!-- /.col -->
-
-
   </div>
   <!-- /.row -->
 </section>

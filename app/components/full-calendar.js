@@ -7,15 +7,12 @@ const FullCalendarComponent = Ember.Component.extend({
 
   didInsertElement: function () {
     //initialize the calendar
-    //Date for the calendar events (dummy data)
-
     $('#calendar').fullCalendar({
       header: {
         left: 'prev,next today', center: 'title', right: 'month,basicWeek,basicDay'
       }, buttonText: {
         today: 'Today', month: 'Monthly', week: 'Weekly', day: 'Daily'
       },
-
       events: this.events,
       editable: false
     });

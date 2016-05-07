@@ -1,10 +1,9 @@
 <div class="form-group">
   <label>Office</label>
-  <select id="office-multiple" class="form-control" multiple="multiple" data-placeholder="Select a Office" style="width: 100%;">
-    <option>North Bay</option>
-    <option>South Bay</option>
-    <option>Two</option>
-    <option>Healthcare</option>
+  <select id="office-multiple" class="form-control" multiple="multiple" data-placeholder="Select a Office"
+          style="width: 100%;">
+    {{#each offices as |office|}}
+      <option>{{office.name}}</option>
+    {{/each}}
   </select>
 </div>
-<!-- /.form-group -->
