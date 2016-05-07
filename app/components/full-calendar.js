@@ -14,7 +14,14 @@ const FullCalendarComponent = Ember.Component.extend({
         today: 'Today', month: 'Monthly', week: 'Weekly', day: 'Daily'
       },
       events: this.events,
-      editable: false
+      editable: false,
+      dayClick: function() {
+
+        alert('Do you want to apply a leave or reserve for a project? Sorry but it will be available soon! ');
+
+        // change the day's background color just for fun
+        $(this).css('background-color', 'red');
+      }
     });
   }
 });

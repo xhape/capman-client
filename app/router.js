@@ -6,9 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-  this.route('project', function(){
-    this.route('project-detail', {path: '/project/:id'});
-  });
+  this.route('project');
+  this.route('project-detail');
   this.route('office');
   this.route('capacity');
   this.route('leave');
@@ -21,6 +20,7 @@ Router.map(function () {
   this.route('dashboard-team-member');
   this.route('dashboard-supervisor');
   this.route('dashboard-director');
+  
   this.route('reports');
 });
 

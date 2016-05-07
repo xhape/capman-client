@@ -25,7 +25,7 @@ export default Ember.Route.extend({
           title: 'Design - 8/54',
           start: new Date(y, m, d - 1),
           allDay: true,
-          url: 'project',
+          url: 'project-detail',
           backgroundColor: "#00c0ef", //red
           borderColor: "#00c0ef" //red
         }, {
