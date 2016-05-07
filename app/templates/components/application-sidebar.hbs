@@ -17,11 +17,27 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu">
       <li class="header">MAIN NAVIGATION</li>
-      <li>
-        {{#link-to 'dashboard'}}
-          <i class="fa fa-dashboard"></i>
-          <span>Dashboard</span>
-        {{/link-to}}
+      <li class="treeview">
+        <a href="#">
+          <i class="fa fa-dashboard"></i> <span>Dashboard</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            {{#link-to 'dashboard-director'}}<i class="fa fa-circle-o"></i> Director{{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'dashboard-supervisor'}}<i class="fa fa-circle-o"></i> Supervisor{{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'dashboard-team-lead'}}<i class="fa fa-circle-o"></i> Lead{{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'dashboard-team-member'}}<i class="fa fa-circle-o"></i> Member{{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'dashboard-client'}}<i class="fa fa-circle-o"></i> Client{{/link-to}}
+          </li>
+        </ul>
       </li>
       <li>
         {{#link-to 'project'}}

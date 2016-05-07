@@ -1,4 +1,4 @@
-{{application-content-header title="Dashboard" subTitle="South Bay"}}
+{{application-content-header title="Dashboard" subTitle="Dashboard for Supervisor with access to Design and Render"}}
 
 <!-- Main content -->
 <section class="content">
@@ -11,7 +11,7 @@
 
         <div class="info-box-content">
           <span class="info-box-text">Projects</span>
-          <span class="info-box-number">50</span>
+          <span class="info-box-number">30</span>
 
           {{#link-to "project" class="info-box-more"}}
             More info <i class="fa fa-arrow-circle-right"></i>
@@ -28,7 +28,7 @@
 
         <div class="info-box-content">
           <span class="info-box-text">Wait List</span>
-          <span class="info-box-number">5</span>
+          <span class="info-box-number">3</span>
 
           {{#link-to "project" class="info-box-more"}}
             More info <i class="fa fa-arrow-circle-right"></i>
@@ -47,7 +47,7 @@
 
         <div class="info-box-content">
           <span class="info-box-text">Leaves</span>
-          <span class="info-box-number">0</span>
+          <span class="info-box-number">3</span>
 
           {{#link-to "leave" class="info-box-more"}}
             More info <i class="fa fa-arrow-circle-right"></i>
@@ -62,7 +62,7 @@
   </div>
   <!-- /.row -->
 
-  <!-- South Bay Capacity-->
+  <!-- Capacity-->
   <div class="row">
 
     <div class="col-md-12">
@@ -77,33 +77,85 @@
           </div>
         </div>
         <!-- /.box-header -->
+
         <div class="box-body">
           <div class="row">
-            <div class="col-md-4">
+            <!-- Daily capacity for each offices -->
+            <div class="col-md-6">
               <p class="text-center">
-                <strong>Today (May 2)</strong>
+                <strong>Design</strong>
               </p>
 
               <div class="progress-group">
-                <span class="progress-text">Design</span>
-                <span class="progress-number"><b>9</b>/48</span>
+                <span class="progress-text">North Bay</span>
+                <span class="progress-number"><b>9</b>/70</span>
 
                 <div class="progress sm">
                   <div class="progress-bar progress-bar-aqua" style="width: 81.25%"></div>
                 </div>
               </div>
               <!-- /.progress-group -->
+
               <div class="progress-group">
-                <span class="progress-text">Audit</span>
-                <span class="progress-number"><b>8</b>/16</span>
+                <span class="progress-text">South Bay</span>
+                <span class="progress-number"><b>8</b>/24</span>
 
                 <div class="progress sm">
                   <div class="progress-bar progress-bar-red" style="width: 50%"></div>
                 </div>
               </div>
               <!-- /.progress-group -->
+
               <div class="progress-group">
-                <span class="progress-text">Render</span>
+                <span class="progress-text">Two</span>
+                <span class="progress-number"><b>6</b>/10</span>
+
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
+                </div>
+              </div>
+              <!-- /.progress-group -->
+
+              <div class="progress-group">
+                <span class="progress-text">Healthcare</span>
+                <span class="progress-number"><b>6</b>/12</span>
+
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
+                </div>
+              </div>
+              <!-- /.progress-group -->
+
+            </div>
+            <!-- /.col -->
+
+            <div class="col-md-6">
+              <p class="text-center">
+                <strong>Render</strong>
+              </p>
+
+              <div class="progress-group">
+                <span class="progress-text">North Bay</span>
+                <span class="progress-number"><b>54</b>/54</span>
+
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-aqua" style="width: 0%"></div>
+                </div>
+              </div>
+              <!-- /.progress-group -->
+
+              <div class="progress-group">
+                <span class="progress-text">South Bay</span>
+                <span class="progress-number"><b>16</b>/16</span>
+
+                <div class="progress sm">
+                  <div class="progress-bar progress-bar-red" style="width: 0%"></div>
+                </div>
+              </div>
+              <!-- /.progress-group -->
+
+              <div class="progress-group">
+                <span class="progress-text">Two</span>
                 <span class="progress-number"><b>6</b>/6</span>
 
                 <div class="progress sm">
@@ -112,68 +164,8 @@
               </div>
               <!-- /.progress-group -->
 
-            </div>
-            <!-- /.col -->
-            <div class="col-md-4">
-              <p class="text-center">
-                <strong>May 3</strong>
-              </p>
-
               <div class="progress-group">
-                <span class="progress-text">Design</span>
-                <span class="progress-number"><b>6</b>/54</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-aqua" style="width: 89%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-              <div class="progress-group">
-                <span class="progress-text">Audit</span>
-                <span class="progress-number"><b>16</b>/16</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-red" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-              <div class="progress-group">
-                <span class="progress-text">Render</span>
-                <span class="progress-number"><b>0</b>/6</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-            </div>
-            <!-- /.col -->
-            <div class="col-md-4">
-              <p class="text-center">
-                <strong>May 4</strong>
-              </p>
-
-              <div class="progress-group">
-                <span class="progress-text">Design</span>
-                <span class="progress-number"><b>54</b>/54</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-aqua" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-              <div class="progress-group">
-                <span class="progress-text">Audit</span>
-                <span class="progress-number"><b>16</b>/16</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-red" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-              <div class="progress-group">
-                <span class="progress-text">Render</span>
+                <span class="progress-text">Healthcare</span>
                 <span class="progress-number"><b>6</b>/6</span>
 
                 <div class="progress sm">

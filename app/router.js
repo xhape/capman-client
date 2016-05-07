@@ -6,13 +6,22 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function () {
-  this.route('dashboard', {path: '/'});
-  this.route('project');
+
+  this.route('project', function(){
+    this.route('project-detail', {path: '/project/:id'});
+  });
   this.route('office');
   this.route('capacity');
   this.route('leave');
   this.route('user');
   this.route('client');
+
+  this.route('dashboard', {path: '/'});
+  this.route('dashboard-team-lead');
+  this.route('dashboard-client');
+  this.route('dashboard-team-member');
+  this.route('dashboard-supervisor');
+  this.route('dashboard-director');
 });
 
 export default Router;
