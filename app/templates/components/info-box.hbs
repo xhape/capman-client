@@ -1,0 +1,14 @@
+<div class="info-box">
+  <span class="info-box-icon {{model.background}}"><i class="{{model.icon}}"></i></span>
+
+  <div class="info-box-content">
+    <span class="info-box-text">{{model.title}}</span>
+    <span class="info-box-number">{{model.value}}</span>
+
+    {{#link-to model.url class="info-box-more"}}
+      More info <i class="fa fa-arrow-circle-right"></i>
+    {{/link-to}}
+  </div>
+  <!-- /.info-box-content -->
+</div>
+<!-- /.info-box -->
