@@ -1,13 +1,21 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
   <h1>
-    {{title}}
-    <small>{{subTitle}}</small>
+    {{model.title}}
+    {{#if model.subTitle}}
+      <small>{{model.subTitle}}</small>
+    {{/if}}
   </h1>
   <ol class="breadcrumb">
     <li>
       {{#link-to 'dashboard'}}<i class="fa fa-dashboard"></i>Home{{/link-to}}
     </li>
-    <li class="active">{{title}}</li>
+    {{#each model.navs as |nav|}}
+      {{#if nav.url}}
+      <li>{{#link-to nav.url}}<i class="{{nav.icon}}"></i>{{nav.title}}{{/link-to}}</li>
+      {{else}}
+        <li class="{{if nav.active "active"}}">{{nav.title}}</li>
+      {{/if}}
+    {{/each}}
   </ol>
 </section>

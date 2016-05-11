@@ -12,7 +12,16 @@ var offices =  [
 export default Ember.Route.extend({
   model() {
     return {
-      offices: offices
+      offices: offices,
+      header : {
+        title : "Project",
+        navs : [
+          {
+            active : true,
+            title : "Project"
+          }
+        ]
+      }
     };
   }
 });

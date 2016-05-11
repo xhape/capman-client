@@ -1,148 +1,161 @@
-{{application-content-header title="Stanford – Green Industry Courtyard"}}
+{{application-content-header model=model.header}}
 
 <!-- Main content -->
 <section class="content">
   <div class="row">
+    <!-- Main Panel -->
     <div class="col-md-8">
-      <div class="box box-solid">
-        <div class="box-header with-border">
-          <h3 class="box-title">Project Details</h3>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Info</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="pid">PID #</label>
+                    <input type="text" class="form-control" id="pid" placeholder="Enter PID #" value="P123456778">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control" id="address" placeholder="Client Address"
+                           value="Stanford, CA">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="scope">Scope</label>
+                <input type="text" class="form-control" id="address" placeholder="Project Scope"
+                       value="Please conduct full audit.">
+              </div>
+              <div class="form-group">
+                <label>
+                  <input type="checkbox"> Is Revision?
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="project-files">Project Files and Information:</label>
+                <input type="text" class="form-control" id="project-files" placeholder="Files Information"
+                       value="FTP Path: Z:\FTP Files\ProViewStudio\Studio South Bay\Stanford - Industry Courtyard\160422_For Proview">
+              </div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
         </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div><label class="control-label">PID #:</label><span class="form-control-static">P123456778</span>
-          </div>
-          <div><label class="control-label">Address:</label><span class="form-control-static">Stanford, CA</span>
-          </div>
-          <div><label class="control-label">Revision:</label><span
-              class="form-control-static">No</span></div>
-          <div><label class="control-label">Scope:</label><span
-              class="form-control-static">Please conduct full audit.</span>
-          </div>
-          <div><label class="control-label">Project Files and Information:</label>FTP Path: Z:\FTP Files\ProView
-            Studio\Studio South Bay\Stanford - Industry Courtyard\160422_For Proview
-          </div>
-        </div>
-        <!-- /.box-body -->
       </div>
-      <!-- /.box -->
-    </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title">Details</h3>
+              <div class="pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                        title="Collapse">
+                  <i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
 
+            <div class="box-body pad">
+              <form>
+                {{wysig-editor}}
+              </form>
+            </div>
+            <!--/.box-body -->
+          </div>
+          <!--/.box -->
+        </div>
+      </div>
+    </div>
+    <!-- ./col-->
+
+    <!-- Right Panels -->
     <div class="col-md-4">
-      <div class="box box-solid">
-        <div class="box-header with-border">
-          <h3 class="box-title">Assignee and Date</h3>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div><label class="control-label">Due Date</label><span class="form-control-static">May 02, 2016</span>
-          </div>
-          <div><label class="control-label">Requested By</label><span class="form-control-static">Jon Smith</span>
-          </div>
-        </div>
-        <!-- /.box-body -->
-      </div>
-      <!-- /.box -->
-    </div>
 
+      <!-- People -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">People</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body form-horizontal">
+              <div class="form-group row">
+                <label class="col-md-3 control-label" for="assignee">Assignee</label>
+                <div class="col-md-9"><input type="text" class="form-control" id="assignee"
+                                             placeholder="Enter User assigned to this Project"
+                                             value="Wenthel Javonitalla"></div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 control-label">Updated</label>
+                <p class="col-md-9 form-control-static">Leslie Pearson</p>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 control-label">Created</label>
+                <p class="col-md-9 form-control-static">Leslie Pearson</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Dates-->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-solid">
+            <div class="box-header with-border">
+              <h3 class="box-title">Dates</h3>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body form-horizontal">
+
+              <div class="form-group row">
+                <label class="col-md-3 control-label" for="pid">Due</label>
+                <div class="col-md-9"><input type="text" class="form-control" id="pid" placeholder="Project Due Date"
+                                             value="May 03, 2016"></div>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 control-label">Updated</label>
+                <p class="col-md-9 form-control-static">May, 01, 2016</p>
+              </div>
+              <div class="form-group row">
+                <label class="col-md-3 control-label">Created</label>
+                <p class="col-md-9 form-control-static">May, 01, 2016</p>
+              </div>
+            </div>
+            <!-- /.box-body -->
+
+          </div>
+          <!-- /.box -->
+        </div>
+      </div>
+    </div>
     <!-- ./col-->
+
   </div>
   <!-- ./row-->
 
-  <div class="row">
-    <div class="col-md-8">
-      <div class="box box-solid">
-        <div class="box-header with-border">
-          <h3 class="box-title">Deliverables</h3>
-        </div>
-        <!-- ./box-header-->
-        <div class="box-body">
-          <pre>Finish Notes:
-
-Panels:
-
--Low Fabric = Meadow/ Upper Fabric = Twinkle/ Low Panel Hard skin = Nickel Metallic
-
--Trim = Nickel Metallic
-
--Receptacle = Tungsten (line 4 = black)
-
--Frosted – Recessed Frameless glass
-
-
-Series 5:
-
--Veneer = QC/OP DRK Thin Line Bamboo 3032
-
--Base = Platinum Metallic
-
-
-
-Details:
-
--Metal = Platinum metallic
-
--Plastic = Frost
-
-
-
-Storage:
-
--Nickel Metallic
-
--Laminate Top = Arctic White
-
--Edge = Arctic White
-
-
-
-Scoop Stools:
-
--Legs = Platinum Metallic
-
--Plastic = 6682
-
--Upholstery = grade 7 DesignTex – Dart: Sapphire
-
-
-
-Think Chair:
-
--Plastic = Black
-
--Back and seat = Buzz2: Tornado 5G65
-
-
-
-Large Common Top (Mezzanine level):
-
--Arctic White
-
--disk Base = Platinum metallic
-
-
-
-Reply Chair:
-
--Mesh = AR01
-
--Upholstery = Remix RE11
-
--Frame = 7207
-
-
-
-Credenza:
-
--Arctic white laminate
-
--black pulls</pre>
-        </div>
-      </div>
-      <!-- ./box-->
-    </div>
-    <!-- ./col-->
-  </div>
-  <!-- ./row-->
 
 </section>
