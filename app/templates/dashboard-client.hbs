@@ -3,6 +3,68 @@
 <!-- Main content -->
 <section class="content">
 
+  <!-- Today's Capacity-->
+  <div class="row">
+
+    <div class="col-md-12">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Today's Capacity</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i
+                class="fa fa-minus"></i>
+            </button>
+          </div>
+        </div>
+        <!-- /.box-header -->
+
+        <div class="box-body">
+          <div class="row">
+            <!-- Daily capacity for each offices -->
+            {{#each model.capacities as |capacity| }}
+              <div class="col-md-3">
+                {{progress-group model=capacity}}
+              </div>
+              <!-- /.col -->
+            {{/each}}
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- ./box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
+  <!-- /.row -->
+
+  <!-- TABLE: Recently Added Projects -->
+  <div class="row">
+    <div class="col-md-12">
+      <div class="box box-info">
+        <div class="box-header with-border">
+          <h3 class="box-title">Today's Project</h3>
+
+          <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="box-body">
+          <div class="table-responsive">
+            {{project-list-large projects=model.projects}}
+          </div>
+          <!-- /.table-responsive -->
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <!-- /.col -->
+  </div>
 </section>
 <!-- /.content -->
 

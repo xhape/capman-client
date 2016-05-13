@@ -1,10 +1,10 @@
 <table class="table no-margin">
   <thead>
   <tr>
-    <th>Designer</th>
     <th>PID</th>
     <th>Client</th>
     <th>Name</th>
+    <th>Assignee</th>
     <th>Hours</th>
     <th>Office</th>
     <th>OWP</th>
@@ -13,10 +13,10 @@
   <tbody>
   {{#each projects as |project|}}
   <tr>
-    <td>{{project.assignee}}</td>
     <td>{{#link-to "project-detail"}}{{project.pid}}{{/link-to}}</td>
     <td>{{project.client}}</td>
     <td>{{project.name}}</td>
+    <td>{{project.assignee}}</td>
     <td>{{project.hours}}</td>
     <td>{{project.office}}</td>
     <td>{{project.createdBy}}</td>
