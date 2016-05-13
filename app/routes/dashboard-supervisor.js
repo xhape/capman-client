@@ -2,11 +2,11 @@ import Ember from 'ember';
 
 let informations = [
   {
-    background: "bg-aqua", icon: "ion ion-easel", title: "Projectx", value: 30, url: "project"
+    background: "bg-aqua", icon: "ion ion-easel", title: "Project", value: 30, url: "project"
   }, {
     background: "bg-red", icon: "ion-ios-time-outline", title: "Wait List", value: 3, url: "project"
   }, {
-    background: "bg-yellow", icon: "ion ion-paintbucket", title: "Leaves", value: 3, url: "leave"
+    background: "bg-yellow", icon: "ion ion-paintbucket", title: "Leave", value: 3, url: "leave"
   }];
 
 let capacities = [
@@ -33,6 +33,7 @@ let capacities = [
         title: "Healthcare", remaining: 4, capacity: 6, background: "progress-bar-yellow", percentage: 66
       }]
   }];
+
 export default Ember.Route.extend({
   model(){
     return {

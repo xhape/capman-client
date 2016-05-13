@@ -1,0 +1,18 @@
+<table class="table no-margin">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Hours</th>
+    <th>Since</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each projects as |project| }}
+    <tr>
+      <td>{{project.name}}</td>
+      <td>{{project.hours}}</td>
+      <td>{{project.reservedDate}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

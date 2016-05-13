@@ -5,60 +5,12 @@
 
   <!-- Info boxes -->
   <div class="row">
-    <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="info-box">
-        <span class="info-box-icon bg-aqua"><i class="ion ion-easel"></i></span>
-
-        <div class="info-box-content">
-          <span class="info-box-text">Projects</span>
-          <span class="info-box-number">50</span>
-
-          {{#link-to "project" class="info-box-more"}}
-            More info <i class="fa fa-arrow-circle-right"></i>
-          {{/link-to}}
-        </div>
-        <!-- /.info-box-content -->
+    {{#each model.informations as |info| }}
+      <!-- Classes is expecting 3 items-->
+      <div class="col-md-4 col-xs-12">
+        {{info-box model=info}}
       </div>
-      <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-    <div class="col-md-4 col-sm-6 col-xs-12">
-      <div class="info-box">
-        <span class="info-box-icon bg-red"><i class="ion-ios-time-outline"></i></span>
-
-        <div class="info-box-content">
-          <span class="info-box-text">Wait List</span>
-          <span class="info-box-number">5</span>
-
-          {{#link-to "project" class="info-box-more"}}
-            More info <i class="fa fa-arrow-circle-right"></i>
-          {{/link-to}}
-        </div>
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
-
-    <!-- /.col -->
-    <div class="col-md-4   col-sm-6 col-xs-12">
-      <div class="info-box">
-        <span class="info-box-icon bg-yellow"><i class="ion ion-paintbucket"></i></span>
-
-        <div class="info-box-content">
-          <span class="info-box-text">Leaves</span>
-          <span class="info-box-number">5</span>
-
-          {{#link-to "leave" class="info-box-more"}}
-            More info <i class="fa fa-arrow-circle-right"></i>
-          {{/link-to}}
-        </div>
-
-        <!-- /.info-box-content -->
-      </div>
-      <!-- /.info-box -->
-    </div>
-    <!-- /.col -->
+    {{/each}}
   </div>
   <!-- /.row -->
 
@@ -81,148 +33,12 @@
         <div class="box-body">
           <div class="row">
             <!-- Daily capacity for each offices -->
-            <div class="col-md-4">
-              <p class="text-center">
-                <strong>Design</strong>
-              </p>
-
-              <div class="progress-group">
-                <span class="progress-text">North Bay</span>
-                <span class="progress-number"><b>9</b>/70</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-aqua" style="width: 81.25%"></div>
-                </div>
+            {{#each model.capacities as |capacity| }}
+              <div class="col-md-4">
+                {{progress-group model=capacity}}
               </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">South Bay</span>
-                <span class="progress-number"><b>8</b>/24</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-red" style="width: 50%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">Two</span>
-                <span class="progress-number"><b>6</b>/10</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">Healthcare</span>
-                <span class="progress-number"><b>6</b>/12</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-            </div>
-            <!-- /.col -->
-
-            <div class="col-md-4">
-              <p class="text-center">
-                <strong>Audit</strong>
-              </p>
-
-              <div class="progress-group">
-                <span class="progress-text">North Bay</span>
-                <span class="progress-number"><b>6</b>/54</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-aqua" style="width: 89%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">South Bay</span>
-                <span class="progress-number"><b>16</b>/16</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-red" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">Two</span>
-                <span class="progress-number"><b>0</b>/6</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">Healthcare</span>
-                <span class="progress-number"><b>0</b>/6</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-            </div>
-            <!-- /.col -->
-
-            <div class="col-md-4">
-              <p class="text-center">
-                <strong>Render</strong>
-              </p>
-
-              <div class="progress-group">
-                <span class="progress-text">North Bay</span>
-                <span class="progress-number"><b>54</b>/54</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-aqua" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">South Bay</span>
-                <span class="progress-number"><b>16</b>/16</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-red" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">Two</span>
-                <span class="progress-number"><b>6</b>/6</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-              <div class="progress-group">
-                <span class="progress-text">Healthcare</span>
-                <span class="progress-number"><b>6</b>/6</span>
-
-                <div class="progress sm">
-                  <div class="progress-bar progress-bar-green" style="width: 0%"></div>
-                </div>
-              </div>
-              <!-- /.progress-group -->
-
-            </div>
+              <!-- /.col -->
+            {{/each}}
             <!-- /.col -->
           </div>
           <!-- /.row -->

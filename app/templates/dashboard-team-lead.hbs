@@ -3,7 +3,6 @@
 <!-- Main content -->
 <section class="content">
 
-
   <!-- South Bay Capacity-->
   <div class="row">
 
@@ -21,35 +20,7 @@
         </div>
         <!-- /.box-header -->
         <div class="box-body">
-          <div class="progress-group">
-            <span class="progress-text">Today (May 2)</span>
-            <span class="progress-number"><b>9</b>/12</span>
-
-            <div class="progress sm">
-              <div class="progress-bar progress-bar-aqua" style="width: 81.25%"></div>
-            </div>
-          </div>
-          <!-- /.progress-group -->
-
-          <div class="progress-group">
-            <span class="progress-text">May 3</span>
-            <span class="progress-number"><b>8</b>/16</span>
-
-            <div class="progress sm">
-              <div class="progress-bar progress-bar-red" style="width: 50%"></div>
-            </div>
-          </div>
-          <!-- /.progress-group -->
-
-          <div class="progress-group">
-            <span class="progress-text">May 4</span>
-            <span class="progress-number"><b>6</b>/6</span>
-
-            <div class="progress sm">
-              <div class="progress-bar progress-bar-green" style="width: 0%"></div>
-            </div>
-          </div>
-          <!-- /.progress-group -->
+          {{progress-group model=model.capacity}}
         </div>
         <!-- ./box-body -->
       </div>
@@ -73,32 +44,7 @@
 
         <div class="box-body">
           <div class="table-responsive">
-            <table class="table no-margin">
-              <thead>
-              <tr>
-                <th>Name</th>
-                <th>Hours</th>
-                <th>Since</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>Google Sta Clara</td>
-                <td>6</td>
-                <td>May 2</td>
-              </tr>
-              <tr>
-                <td>LinkedIn San Francisco</td>
-                <td>6</td>
-                <td>May 1</td>
-              </tr>
-              <tr>
-                <td>Stanford 3rd Floor</td>
-                <td>6</td>
-                <td>Apr 30</td>
-              </tr>
-              </tbody>
-            </table>
+            {{wait-list-project-small projects=model.waitListedProjects}}
           </div>
           <!-- /.table-responsive -->
         </div>
@@ -122,29 +68,19 @@
         <!-- /.box-header -->
         <div class="box-body no-padding">
           <ul class="users-list clearfix">
-            <li>
-              <img src="img/user1-128x128.jpg" alt="User Image">
-              <a class="users-list-name" href="#">Jon</a>
-            </li>
-            <li>
-              <img src="img/user8-128x128.jpg" alt="User Image">
-              <a class="users-list-name" href="#">Tyrion</a>
-            </li>
-            <li>
-              <img src="img/user7-128x128.jpg" alt="User Image">
-              <a class="users-list-name" href="#">Sansa</a>
-              <span class="users-list-date">Half Day</span>
-            </li>
-            <li>
-              <img src="img/user6-128x128.jpg" alt="User Image">
-              <a class="users-list-name" href="#">Roose</a>
-            </li>
+            {{#each model.leaves as |user|}}
+              <li>
+                <img src="{{user.picture}}" alt="User Image">
+                <a class="users-list-name" href="#">{{user.name}}</a>
+                {{#if user.isHalfDay}}<span class="users-list-date">Half Day</span>{{/if}}
+              </li>
+            {{/each}}
           </ul>
           <!-- /.users-list -->
         </div>
         <!-- /.box-body -->
         <div class="box-footer text-center">
-          <a href="javascript::" class="uppercase">View Other Days</a>
+          <a href="javascript:" class="uppercase">View Other Days</a>
         </div>
         <!-- /.box-footer -->
       </div>
@@ -171,48 +107,7 @@
 
         <div class="box-body">
           <div class="table-responsive">
-            <table class="table no-margin">
-              <thead>
-              <tr>
-                <th>Designer</th>
-                <th>PID</th>
-                <th>Client</th>
-                <th>Name</th>
-                <th>Hours</th>
-                <th>Office</th>
-                <th>OWP</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>Arya Stark</td>
-                <td>{{#link-to "project-detail"}}121255{{/link-to}}</td>
-                <td>Google</td>
-                <td>Google San Diego 3rd Floor</td>
-                <td>3</td>
-                <td>South Bay</td>
-                <td>Cercei Lannister</td>
-              </tr>
-              <tr>
-                <td>Jon Snow</td>
-                <td>{{#link-to "project-detail"}}121255{{/link-to}}</td>
-                <td>LinkedIn</td>
-                <td>LinkedIn San Diego Basement</td>
-                <td>3</td>
-                <td>South Bay</td>
-                <td>Tyrion Lannister</td>
-              </tr>
-              <tr>
-                <td>Ned Stark</td>
-                <td>{{#link-to "project-detail"}}121255{{/link-to}}</td>
-                <td>Stanford</td>
-                <td>Stanford San Diego 1st Floor</td>
-                <td>3</td>
-                <td>Healthcare</td>
-                <td>Tywin Lannister</td>
-              </tr>
-              </tbody>
-            </table>
+            {{project-list-large projects=model.projects}}
           </div>
           <!-- /.table-responsive -->
         </div>
