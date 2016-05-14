@@ -10,6 +10,25 @@ module.exports = function(defaults) {
   //we are using the admin-lte theme https://almsaeedstudio.com/
   //use admin-lte dependencies if available to avoid conflict with the theme
 
+  //fonts
+  app.import('bower_components/font-awesome/css/font-awesome.css');
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.ttf', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/font-awesome/fonts/fontawesome-webfont.woff2', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/Ionicons/css/ionicons.css');
+  app.import('bower_components/Ionicons/fonts/ionicons.ttf', {
+    destDir: 'fonts'
+  });
+  app.import('bower_components/Ionicons/fonts/ionicons.woff', {
+    destDir: 'fonts'
+  });
+
   //css dependencies
   app.import('bower_components/admin-lte/bootstrap/css/bootstrap.css');
   app.import('bower_components/admin-lte/plugins/select2/select2.css');
