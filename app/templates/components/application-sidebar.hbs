@@ -53,38 +53,52 @@
         </ul>
       </li>
       <li>
-        {{#link-to 'capacity'}}
-          <i class="fa fa-bitbucket"></i>
-          <span>Capacity</span>
-        {{/link-to}}
+        <a href="#">
+          <i class="fa fa-users"></i> <span>User</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            {{#link-to 'leave'}}
+              <i class="fa fa-calendar-times-o"></i>
+              <span>Leave Calendar</span>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'user'}}
+              <i class="fa fa-list"></i>
+              <span>List</span>
+            {{/link-to}}
+          </li>
+        </ul>
       </li>
       <li>
-        {{#link-to 'user'}}
-          <i class="fa fa-tint"></i>
-          <span>User</span>
-        {{/link-to}}
-      </li>
-      <li>
-        {{#link-to 'leave'}}
-          <i class="ion ion-paintbucket"></i>
-          <span>Leave</span>
-        {{/link-to}}
+        <a href="#">
+          <i class="fa fa-map-marker"></i> <span>Office</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            {{#link-to 'capacity'}}
+              <i class="fa fa-bitbucket"></i>
+              <span>Capacity</span>
+            {{/link-to}}
+          </li>
+          <li>
+            {{#link-to 'office'}}
+              <i class="fa fa-list"></i>
+              <span>List</span>
+            {{/link-to}}
+          </li>
+        </ul>
       </li>
       <li>
         {{#link-to 'client'}}
-          <i class="ion ion-image"></i>
+          <i class="fa fa-building"></i>
           <span>Client</span>
         {{/link-to}}
       </li>
       <li>
-        {{#link-to 'office'}}
-          <i class="fa fa-paint-brush"></i>
-          <span>Office</span>
-        {{/link-to}}
-      </li>
-      <li>
         {{#link-to 'reports'}}
-          <i class="fa fa-camera"></i>
+          <i class="fa fa-pie-chart"></i>
           <span>Reports</span>
         {{/link-to}}
       </li>

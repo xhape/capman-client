@@ -3,60 +3,38 @@
 <!-- Main content -->
 <section class="content">
   <div class="row">
-    <!-- Left col -->
-    <div class="col-md-12">
+    <!-- Search Panel -->
+    <div class="col-md-3">
+      <div class="box box-pane">
+        <div class="box-body">
+          <div class="form-group">
+            <label>Office</label>
+            <select class="form-control">
+              <option>Select Office</option>
+              <option>North Bay</option>
+              <option>South Bay</option>
+              <option>Healthcare</option>
+              <option>TWO</option>
+              <option>Proview Studio</option>
+            </select>
+          </div>
+
+          {{team-multiple-select}}
+
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box-->
+    </div>
+    <!-- /. col -->
+
+    <div class="col-md-9">
 
       <!-- TABLE: Recently Added Projects -->
       <div class="box box-info">
         <div class="box-body">
           <div class="table-responsive">
-            <table class="table no-margin">
-              <thead>
-              <tr>
-                <th>Name</th>
-                <th>Office</th>
-                <th>Team</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td><a href="user/123456">Wenthel Uy-Javonitalla</a></td>
-                <td>Proview Studio</td>
-                <td>
-                  <span class="label bg-green">Design</span>
-                  <span class="label bg-aqua">Render</span>
-                </td>
-              </tr>
-              <tr>
-                <td><a href="user/123457">Leslie Pearson</a></td>
-                <td>OWP - North Bay</td>
-                <td>
-                  <span class="label bg-green">Design</span>
-                </td>
-              </tr>
-              <tr>
-                <td><a href="user/123456">Mike Smith</a></td>
-                <td>OWP - Healthcare</td>
-                <td>
-                  <span class="label bg-red">Sales</span>
-                </td>
-              </tr>
-              <tr>
-                <td><a href="user/123456">Daryll Serano</a></td>
-                <td>Proview Studio</td>
-                <td>
-                  <span class="label bg-aqua">Render</span>
-                </td>
-              </tr>
-              <tr>
-                <td><a href="user/123456">Marj</a></td>
-                <td>Proview Studio</td>
-                <td>
-                  <span class="label bg-lime">Audit</span>
-                </td>
-              </tr>
-              </tbody>
-            </table>
+            {{user-list-large users=model.users}}
           </div>
           <!-- /.table-responsive -->
         </div>

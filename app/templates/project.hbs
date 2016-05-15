@@ -3,56 +3,24 @@
 <!-- Main content -->
 <section class="content">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="box box-pane">
         <div class="box-body">
-          {{office-multiple-select offices=model.offices}}
+          {{date-range-picker title="Date" fieldId="dateRange"}}
+          {{multiple-select selectId="office" title="Office" placeholder="Select a office" options=model.offices}}
           {{team-multiple-select}}
           {{client-multiple-select}}
-          {{date-range-picker}}
         </div>
         <!-- /.box-body -->
       </div>
     </div>
 
-    <!-- Left col -->
-    <div class="col-md-8">
 
-      <!-- TABLE: Recently Added Projects -->
+    <div class="col-md-9">
+      <!-- Projects -->
       <div class="box box-info">
         <div class="box-body">
-          <div class="table-responsive">
-            <table class="table no-margin">
-              <thead>
-              <tr>
-                <th>PID</th>
-                <th>Name</th>
-                <th>Type</th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <td>{{#link-to "project-detail"}}7676644{{/link-to}}</td>
-                <td>Google</td>
-                <td>
-                  <span class="label bg-green">Design</span>
-                  <span class="label bg-aqua">Audit</span>
-                </td>
-              </tr>
-              <tr>
-                <td>{{#link-to "project-detail"}}121255{{/link-to}}</td>
-                <td>LinkedIn</td>
-                <td><span class="label bg-green">Design</span></td>
-              </tr>
-              <tr>
-                <td>{{#link-to "project-detail"}}129844{{/link-to}}</td>
-                <td>Stanford</td>
-                <td><span class="label bg-aqua">Audit</span></td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- /.table-responsive -->
+          {{project-list-large projects=model.projects}}
         </div>
         <!-- /.box-body -->
       </div>

@@ -1,0 +1,30 @@
+<table class="table no-margin">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Office</th>
+    <th>Team</th>
+  </tr>
+  </thead>
+  <tbody>
+  {{#each users as |user|}}
+    <tr>
+      <td><img class="img-responsive img-circle img-sm" src="{{user.image}}" alt="Assignee Image">{{user.name}}</td>
+      <td>{{user.office}}</td>
+      <td>
+        {{#each user.teams as |team|}}
+          {{#if (compare team 'Design')}}
+            <span class="label bg-green">{{team}}</span>
+          {{/if}}
+          {{#if (compare team 'Audit')}}
+            <span class="label bg-lime">{{team}}</span>
+          {{/if}}
+          {{#if (compare team 'Render')}}
+            <span class="label bg-aqua">{{team}}</span>
+          {{/if}}
+        {{/each}}
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

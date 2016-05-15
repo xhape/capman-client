@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   didInsertElement: function () {
-    $("#" + this.id).select2();
+    $('#' + this.get('selectId')).select2();
   }
 });

@@ -14,3 +14,7 @@
   border: 1px solid #dddddd;
   padding: 10px;
 }
+
+td .img-circle {
+  margin-right: 10px;
+}

@@ -1,5 +1,9 @@
 import Ember from 'ember';
 
+let project = {
+
+};
+
 export default Ember.Route.extend({
   model(){
     return {
@@ -17,7 +21,8 @@ export default Ember.Route.extend({
             title: "Edit"
           }
         ]
-      }
+      },
+      project : project
     };
   }
 });
