@@ -36,7 +36,7 @@ module.exports = function(defaults) {
   app.import('bower_components/admin-lte/plugins/daterangepicker/daterangepicker-bs3.css');
   app.import('bower_components/admin-lte/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.css');
   app.import('bower_components/admin-lte/dist/css/AdminLTE.css');
-  app.import('bower_components/admin-lte/dist/css/skins/skin-blue.css');
+  app.import('bower_components/admin-lte/dist/css/skins/skin-black.css');
 
   //javascript dependencies -
   app.import('bower_components/admin-lte/plugins/jQuery/jQuery-2.2.0.min.js');

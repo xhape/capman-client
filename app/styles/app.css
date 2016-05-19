@@ -18,3 +18,9 @@
 td .img-circle {
   margin-right: 10px;
 }
+
+.box-title .icon {
+  margin-right: 10px;
+  font-size: 24px;
+  color: #3c8dbc;
+}
