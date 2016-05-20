@@ -18,38 +18,36 @@
             <!-- /.box-header -->
             <div class="box-body">
               <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="pid">PID #</label>
-                    <input type="text" class="form-control" id="pid" placeholder="Enter PID #" value="P123456778">
-                  </div>
+                <div class="col-md-6 form-detail row">
+                  <label class="col-sm-3">PID #</label>
+                  <div class="col-sm-9">P123456778</div>
                 </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label for="pid">Client</label>
-                    <input type="text" class="form-control" id="client" placeholder="Client" value="Standford">
-                  </div>
+                <div class="col-md-6 form-detail row">
+                  <label class="col-sm-3">Client</label>
+                  <div class="col-sm-9">Standford</div>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="address">Address</label>
-                <input type="text" class="form-control" id="address" placeholder="Client Address"
-                       value="Stanford, CA">
+              <div class="row">
+                <div class="col-md-6 form-detail row">
+                  <label class="col-sm-3">Address</label>
+                  <div class="col-sm-9">Stanford, CA</div>
+                </div>
+                <div class="col-md-6 form-detail row">
+                  <label class="col-md-3">Type</label>
+                  <div class="col-md-9"><span class="label label-danger">Revision</span></div>
+                </div>
               </div>
-              <div class="form-group">
-                <label for="scope">Scope</label>
-                <input type="text" class="form-control" id="scope" placeholder="Project Scope"
-                       value="Please conduct full audit.">
+              <div class="row">
+                <div class="col-md-6 form-detail row">
+                  <label class="col-md-3">Scope</label>
+                  <div class="col-md-9">Please conduct full audit.</div>
+                </div>
               </div>
-              <div class="form-group">
-                <label>
-                  <input type="checkbox"> Is Revision?
-                </label>
-              </div>
-              <div class="form-group">
-                <label for="project-files">Project Files and Information:</label>
-                <input type="text" class="form-control" id="project-files" placeholder="Files Information"
-                       value="FTP Path: Z:\FTP Files\ProViewStudio\Studio South Bay\Stanford - Industry Courtyard\160422_For Proview">
+              <div class="form-detail">
+                <label>Project Files and Information:</label>
+                <div>FTP Path: Z:\FTP Files\ProViewStudio\Studio South Bay\Stanford - Industry Courtyard\160422_For
+                  Proview
+                </div>
               </div>
             </div>
             <!-- /.box-body -->
@@ -57,11 +55,13 @@
           <!-- /.box -->
         </div>
       </div>
+
+      <!-- Deliverables -->
       <div class="row">
         <div class="col-md-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Details</h3>
+              <h3 class="box-title">Deliverables</h3>
               <div class="pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                         title="Collapse">
@@ -74,6 +74,58 @@
               <form>
                 {{wysig-editor}}
               </form>
+            </div>
+            <!--/.box-body -->
+          </div>
+          <!--/.box -->
+        </div>
+      </div>
+
+      <!-- Subtask -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Subtask</h3>
+              <div class="pull-right">
+                <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Add Subtask"><i
+                    class="fa fa-plus"></i></button>
+
+                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
+                        title="Collapse">
+                  <i class="fa fa-minus"></i></button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+
+            <div class="box-body">
+              <table class="table table-hover">
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Assignee</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td><i class="fa fa-pencil-square-o"></i> Design Office Space</td>
+                  <td>Sansa Stark</td>
+                  <td><span class="label label-success">Closed</span></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-paint-brush"></i> Render Office Space</td>
+                  <td>Jon Snow</td>
+                  <td><span class="label label-success">Closed</span></td>
+                </tr>
+                <tr>
+                  <td><i class="fa fa-check-square-o"></i> Audit Office Space Design</td>
+                  <td>Tyrion Lannister</td>
+                  <td><span class="label label-info">In Progress</span></td>
+                </tr>
+                </tbody>
+              </table>
+
             </div>
             <!--/.box-body -->
           </div>
@@ -100,19 +152,17 @@
             <!-- /.box-header -->
 
             <div class="box-body form-horizontal">
-              <div class="form-group row">
-                <label class="col-md-3 control-label" for="assignee">Assignee</label>
-                <div class="col-md-9"><input type="text" class="form-control" id="assignee"
-                                             placeholder="Enter User assigned to this Project"
-                                             value="Wenthel Javonitalla"></div>
+              <div class="form-detail row">
+                <label class="col-sm-3">Assignee</label>
+                <div class="col-sm-9">Wenthel Javonitalla</div>
               </div>
-              <div class="form-group row">
-                <label class="col-md-3 control-label">Updated</label>
-                <p class="col-md-9 form-control-static">Leslie Pearson</p>
+              <div class="form-detail row">
+                <label class="col-sm-3">Updated</label>
+                <div class="col-sm-9">Leslie Pearson</div>
               </div>
-              <div class="form-group row">
-                <label class="col-md-3 control-label">Created</label>
-                <p class="col-md-9 form-control-static">Leslie Pearson</p>
+              <div class="form-detail row">
+                <label class="col-sm-3">Created</label>
+                <div class="col-sm-9">Leslie Pearson</div>
               </div>
             </div>
 
@@ -133,20 +183,18 @@
             </div>
             <!-- /.box-header -->
 
-            <div class="box-body form-horizontal">
-
-              <div class="form-group row">
-                <label class="col-md-3 control-label" for="pid">Due</label>
-                <div class="col-md-9"><input type="text" class="form-control" id="pid" placeholder="Project Due Date"
-                                             value="May 03, 2016"></div>
+            <div class="box-body">
+              <div class="form-detail row">
+                <label class="col-sm-3">Due</label>
+                <div class="col-sm-9">May 03, 2016</div>
               </div>
-              <div class="form-group row">
-                <label class="col-md-3 control-label">Updated</label>
-                <p class="col-md-9 form-control-static">May, 01, 2016</p>
+              <div class="form-detail row">
+                <label class="col-sm-3">Updated</label>
+                <div class="col-sm-9">04-Mar-16 10:07 AM</div>
               </div>
-              <div class="form-group row">
-                <label class="col-md-3 control-label">Created</label>
-                <p class="col-md-9 form-control-static">May, 01, 2016</p>
+              <div class="form-detail row">
+                <label class="col-sm-3">Created</label>
+                <div class="col-sm-9">25-Jan-16 2:29 PM</div>
               </div>
             </div>
             <!-- /.box-body -->
@@ -161,56 +209,6 @@
   </div>
   <!-- ./row-->
 
-  <!-- Subtask -->
-  <div class="row">
-    <div class="col-md-12">
-      <div class="box">
-        <div class="box-header">
-          <h3 class="box-title">Subtask</h3>
-          <div class="pull-right">
-            <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Add Subtask"><i
-                class="fa fa-plus"></i></button>
 
-            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                    title="Collapse">
-              <i class="fa fa-minus"></i></button>
-          </div>
-        </div>
-        <!-- /.box-header -->
-
-        <div class="box-body">
-          <table class="table table-hover">
-            <thead>
-            <tr>
-              <th>Name</th>
-              <th>Assignee</th>
-              <th>Status</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td><i class="fa fa-pencil-square-o"></i> Design Office Space</td>
-              <td>Sansa Stark</td>
-              <td><span class="label label-success">Closed</span></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-paint-brush"></i> Render Office Space</td>
-              <td>Jon Snow</td>
-              <td><span class="label label-success">Closed</span></td>
-            </tr>
-            <tr>
-              <td><i class="fa fa-check-square-o"></i> Audit Office Space Design</td>
-              <td>Tyrion Lannister</td>
-              <td><span class="label label-info">In Progress</span></td>
-            </tr>
-            </tbody>
-          </table>
-
-        </div>
-        <!--/.box-body -->
-      </div>
-      <!--/.box -->
-    </div>
-  </div>
   <!-- /.row-->
 </section>

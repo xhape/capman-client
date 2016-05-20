@@ -6,6 +6,10 @@
   padding-right: 10px;
 }
 
+.form-detail {
+  padding-bottom: 5px;
+}
+
 .wysig-editor {
   width: 100%;
   height: 200px;
