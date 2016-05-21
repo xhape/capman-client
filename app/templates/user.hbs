@@ -7,20 +7,8 @@
     <div class="col-md-3">
       <div class="box box-pane">
         <div class="box-body">
-          <div class="form-group">
-            <label>Office</label>
-            <select class="form-control">
-              <option>Select Office</option>
-              <option>North Bay</option>
-              <option>South Bay</option>
-              <option>Healthcare</option>
-              <option>TWO</option>
-              <option>Proview Studio</option>
-            </select>
-          </div>
-
-          {{team-multiple-select}}
-
+          {{multiple-select selectId="office" title="Office" placeholder="Select a Office" options=model.offices}}
+          {{multiple-select selectId="team" title="Team" placeholder="Select Team" options=model.teams}}
         </div>
         <!-- /.box-body -->
       </div>

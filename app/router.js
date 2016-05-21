@@ -24,6 +24,7 @@ Router.map(function () {
   this.route('dashboard-director');
 
   this.route('reports');
+  this.route('user-detail');
 });
 
 export default Router;

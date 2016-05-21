@@ -1,5 +1,25 @@
 import Ember from 'ember';
 
+//dummy teams for the search panel
+let teams = [
+  {
+    name: "Design"
+  }, {
+    name: "Audit"
+  }, {
+    name: "Render"
+  }, {
+    name: "Sales"
+  }];
+
+//dummy offices for the search panel
+let offices = [
+  {
+    name: "North Bay"
+  }, {
+    name: "South Bay"
+  }];
+
 //dummy users
 let users = [
   {
@@ -24,6 +44,9 @@ let users = [
 export default Ember.Route.extend({
   model(){
     return {
+      //for the search panel
+      teams : teams,
+      offices: offices,
       header : {
         title : "Users",
         navs : [
