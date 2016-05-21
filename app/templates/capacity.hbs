@@ -3,6 +3,7 @@
 <!-- Main content -->
 <section class="content">
   <div class="row">
+    <!--Search Panel -->
     <div class="col-md-3">
       <div class="box box-pane">
         <div class="box-body">
@@ -10,14 +11,13 @@
             <label>Office</label>
             <select class="form-control">
               <option>Select Office</option>
-              <option>North Bay</option>
-              <option>South Bay</option>
-              <option>Healthcare</option>
-              <option>TWO</option>
+              {{#each model.offices as |office|}}
+                <option>{{office.name}}</option>
+              {{/each}}
             </select>
           </div>
 
-          {{team-multiple-select}}
+          {{multiple-select selectId="team" title="Team" placeholder="Select Team" options=model.teams}}
 
         </div>
         <!-- /.box-body -->
@@ -26,6 +26,7 @@
     </div>
     <!-- /. col -->
 
+    <!-- Calendar -->
     <div class="col-md-9">
       <div class="box box-primary">
         <div class="box-body">

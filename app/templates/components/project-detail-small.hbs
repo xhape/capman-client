@@ -1,0 +1,52 @@
+<div class="box">
+  <div class="box-header with-border">
+    <h3 class="box-title">{{project.name}}</h3>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <div class="row">
+      <div class="col-md-6 form-detail row">
+        <label class="col-sm-3">PID #</label>
+        <div class="col-sm-9">{{project.pid}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-detail row">
+        <label class="col-sm-3">Office</label>
+        <div class="col-sm-9">{{project.office}}</div>
+      </div>
+      <div class="col-md-6 form-detail row">
+        <label class="col-sm-3">Assignee</label>
+        <div class="col-sm-9">{{project.assignee.name}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-detail row">
+        <label class="col-sm-3">Client</label>
+        <div class="col-sm-9">{{project.client}}</div>
+      </div>
+      <div class="col-md-6 form-detail row">
+        <label class="col-sm-3">Due Date</label>
+        <div class="col-sm-9">{{project.due}}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 form-detail row">
+        <label class="col-sm-3">Address</label>
+        <div class="col-sm-9">{{project.address}}</div>
+      </div>
+      <div class="col-md-6 form-detail row">
+        <label class="col-md-3">Revision</label>
+        <div class="col-md-9">
+          {{#if project.isRevision}}
+            <span class="label label-danger">Yes</span>
+          {{else}}
+            <span class="label label-info">No</span>
+          {{/if}}
+          </div>
+      </div>
+    </div>
+  </div>
+  <!-- /.box-body -->
+</div>
+<!-- /.box -->

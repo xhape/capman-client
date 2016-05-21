@@ -28,11 +28,31 @@ let leaves = [
   }, {
     title: 'Bien', start: new Date(y, m, d + 7), allDay: true, backgroundColor: "#00c0ef", borderColor: "#00c0ef"
   }];
+
+//dummy teams for the search panel
+let teams = [
+  {
+    name: "Design"
+  }, {
+    name: "Audit"
+  }, {
+    name: "Render"
+  }, {
+    name: "Sales"
+  }];
+
 export default Ember.Route.extend({
   model(){
     return {
+      //for the search panel
+      teams, teams,
       //Random leaves
       leaves : leaves,
+
+      calendarOptions: {
+        left : "prev,next",
+        right: 'month,basicWeek'
+      },
 
       header : {
         title : "Leave",

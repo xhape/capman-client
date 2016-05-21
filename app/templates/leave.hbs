@@ -4,10 +4,22 @@
 <section class="content">
 
   <div class="row">
-    <div class="col-md-12">
+    <!--Search Panel -->
+    <div class="col-md-3">
+      <div class="box box-pane">
+        <div class="box-body">
+          {{multiple-select selectId="team" title="Team" placeholder="Select Team" options=model.teams}}
+        </div>
+        <!-- /.box-body -->
+      </div>
+      <!-- /.box-->
+    </div>
+    <!-- /. col -->
+
+    <div class="col-md-9">
       <div class="box box-primary">
         <div class="box-body no-padding">
-          {{full-calendar events=model.leaves}}
+          {{full-calendar events=model.leaves options=model.calendarOptions}}
         </div>
       </div>
 

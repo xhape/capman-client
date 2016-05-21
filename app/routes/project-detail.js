@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 let project = {
+  pidNumber : "P123456778",
 
 };
 
@@ -12,13 +13,13 @@ export default Ember.Route.extend({
         navs : [
           {
             active : false,
-            title : "Project",
+            title : "Projects",
             url : "project",
             icon : "ion ion-easel"
           },
           {
             active : true,
-            title: "Edit"
+            title: "Detail"
           }
         ]
       },
