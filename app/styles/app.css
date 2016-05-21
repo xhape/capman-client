@@ -28,3 +28,11 @@ td .img-circle {
   font-size: 24px;
   color: #3c8dbc;
 }
+
+.form-detail.with-image img {
+  margin-right: 5px;
+}
+
+.form-detail.with-image p {
+  margin-top: 5px;
+}
