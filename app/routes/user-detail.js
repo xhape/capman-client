@@ -10,7 +10,7 @@ export default Ember.Route.extend({
             active : false,
             title : "Users",
             url : "user",
-            icon : "ion ion-easel"
+            icon : "fa fa-users"
           },
           {
             active : true,
