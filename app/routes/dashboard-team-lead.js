@@ -1,5 +1,8 @@
 import Ember from 'ember';
 
+let date = new Date();
+let d = date.getDate(), m = date.getMonth(), y = date.getFullYear();
+
 let capacity = {
   informations : [
     {
@@ -16,17 +19,17 @@ let waitListedProjects = [
   {
     name : "Google Sta Clara",
     hours : 6,
-    reservedDate : 'May 2'
+    reservedDate : new Date(y, m, d - 5)
   },
   {
     name : "LinkedIn San Francisco",
     hours : 6,
-    reservedDate : 'May 1'
+    reservedDate : new Date(y, m, d - 1)
   },
   {
     name : "Stanford 3rd Floor",
     hours : 6,
-    reservedDate : 'April 30'
+    reservedDate : new Date(y, m, d - 2)
   }
 ];
 

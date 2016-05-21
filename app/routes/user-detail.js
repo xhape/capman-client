@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model(){
     return {
       header : {
-        title : "Users",
+        title : "User Detail",
         navs : [
           {
             active : false,

@@ -21,27 +21,27 @@
               <div class="row">
                 <div class="col-md-6 form-detail row">
                   <label class="col-sm-3">PID #</label>
-                  <div class="col-sm-9">P123456778</div>
+                  <div class="col-sm-9">{{model.project.pid}}</div>
                 </div>
                 <div class="col-md-6 form-detail row">
                   <label class="col-sm-3">Client</label>
-                  <div class="col-sm-9">Standford</div>
+                  <div class="col-sm-9">{{model.project.client}}</div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 form-detail row">
                   <label class="col-sm-3">Address</label>
-                  <div class="col-sm-9">Stanford, CA</div>
+                  <div class="col-sm-9">{{model.project.client}}</div>
                 </div>
                 <div class="col-md-6 form-detail row">
                   <label class="col-md-3">Revision</label>
-                  <div class="col-md-9"><span class="label label-danger">Yes</span></div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-detail row">
-                  <label class="col-md-3">Scope</label>
-                  <div class="col-md-9">Please conduct full audit.</div>
+                  <div class="col-md-9">
+                    {{#if model.project.isRevision}}
+                      <span class="label label-danger">Yes</span>
+                    {{else}}
+                      <span class="label label-success">No</span>
+                    {{/if}}
+                  </div>
                 </div>
               </div>
             </div>
@@ -50,13 +50,14 @@
           <!-- /.box -->
         </div>
       </div>
+      <!-- /.row-->
 
       <!-- Deliverables -->
       <div class="row">
         <div class="col-md-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title"><i class="icon fa fa-truck"></i>Deliverables</h3>
+              <h3 class="box-title"><i class="icon fa fa-truck"></i>Scope & Deliverables</h3>
               <div class="pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                         title="Collapse">
@@ -66,86 +67,21 @@
             <!-- /.box-header -->
 
             <div class="box-body pad">
-              <pre>Finish Notes:
-
-<b>Panels:</b>:
-
--Low Fabric = Meadow/ Upper Fabric = Twinkle/ Low Panel Hard skin = Nickel Metallic
-
--Trim = Nickel Metallic
-
--Receptacle = Tungsten (line 4 = black)
-
--Frosted – Recessed Frameless glass
-
-
-Series 5:
-
--Veneer = QC/OP DRK Thin Line Bamboo 3032
-
--Base = Platinum Metallic
-
-
-Details:
-
--Metal = Platinum metallic
-
--Plastic = Frost
-
-
-Storage:
-
--Nickel Metallic
-
--Laminate Top = Arctic White
-
--Edge = Arctic White
-
-
-Scoop Stools:
-
--Legs = Platinum Metallic
-
--Plastic = 6682
-
--Upholstery = grade 7 DesignTex – Dart: Sapphire
-
-
-Think Chair:
-
--Plastic = Black
-
--Back and seat = Buzz2: Tornado 5G65
-
-
-Large Common Top (Mezzanine level):
-
--Arctic White
-
--disk Base = Platinum metallic
-
-
-Reply Chair:
-
--Mesh = AR01
-
--Upholstery = Remix RE11
-
--Frame = 7207
-
-
-Credenza:
-
--Arctic white laminate
-
--black pulls
-              </pre>
+              <div class="form-detail">
+                <label>Scope</label>
+                <pre>{{model.project.scope}}</pre>
+              </div>
+              <div class="form-detail">
+                <label>Deliverables</label>
+                <pre>{{model.project.deliverables}}</pre>
+              </div>
             </div>
             <!--/.box-body -->
           </div>
           <!--/.box -->
         </div>
       </div>
+      <!-- /.row-->
 
       <!-- Attachment -->
       <div class="row">
@@ -173,10 +109,12 @@ Credenza:
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td>Z:\FTP Files\ProView Studio\Studio South Bay\Stanford - Industry Courtyard\160422_For Proview Audit</td>
-                  <td>FTP Path</td>
-                </tr>
+                {{#each model.project.files as |file|}}
+                  <tr>
+                    <td>{{file.location}}</td>
+                    <td>{{file.description}}</td>
+                  </tr>
+                {{/each}}
                 </tbody>
               </table>
 
@@ -217,56 +155,44 @@ Credenza:
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <td><i class="fa fa-pencil-square-o"></i></td>
-                  <td>Design Office Space</td>
-                  <td>Sansa Stark</td>
-                  <td><span class="label label-success">Closed</span></td>
-                  <td>
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-ellipsis-v"></i></button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Edit</a></li>
-                        <li><a href="#">Delete</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-paint-brush"></i></td>
-                  <td>Render Office Space</td>
-                  <td>Jon Snow</td>
-                  <td><span class="label label-success">Closed</span></td>
-                  <td>
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-ellipsis-v"></i></button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Edit</a></li>
-                        <li><a href="#">Delete</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td><i class="fa fa-check-square-o"></i></td>
-                  <td>Audit Office Space Design</td>
-                  <td>Tyrion Lannister</td>
-                  <td><span class="label label-info">In Progress</span></td>
-                  <td>
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
-                        <i class="fa fa-ellipsis-v"></i></button>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Close</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Edit</a></li>
-                        <li><a href="#">Delete</a></li>
-                      </ul>
-                    </div>
-                  </td>
-                </tr>
+                {{#each model.project.subtasks as |task|}}
+                  <tr>
+                    <td>
+                      {{#if (compare task.type "Design")}}
+                        <i class="fa fa-pencil-square-o"></i>
+                      {{else if (compare task.type "Render")}}
+                        <i class="fa fa-paint-brush"></i>
+                      {{else if (compare task.type "Audit")}}
+                        <i class="fa fa-check-square-o"></i>
+                      {{/if}}
+                    </td>
+                    <td>{{task.name}}</td>
+                    <td>{{task.assignee}}</td>
+                    <td>
+                      {{#if (compare task.status "Closed")}}
+                        <span class="label label-success">Closed</span>
+                      {{else if (compare task.status "Open")}}
+                        <span class="label label-warning">Open</span>
+                      {{else}}
+                        <span class="label label-info">In Progress</span>
+                      {{/if}}
+                    </td>
+                    <td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
+                          <i class="fa fa-ellipsis-v"></i></button>
+                        <ul class="dropdown-menu" role="menu">
+                          {{#if (compare task.status "In Progress")}}
+                            <li><a href="#">Close</a></li>
+                            <li class="divider"></li>
+                          {{/if}}
+                          <li><a href="#">Edit</a></li>
+                          <li><a href="#">Delete</a></li>
+                        </ul>
+                      </div>
+                    </td>
+                  </tr>
+                {{/each}}
                 </tbody>
               </table>
 
@@ -276,6 +202,7 @@ Credenza:
           <!--/.box -->
         </div>
       </div>
+      <!-- /.row-->
     </div>
     <!-- ./col-->
 
@@ -299,21 +226,21 @@ Credenza:
               <div class="form-detail row with-image">
                 <label class="col-sm-3">Assignee</label>
                 <div class="col-sm-9">
-                  <img class="img-responsive img-circle img-sm" src="img/user7-128x128.jpg" alt="Assignee Image">
-                  <p>Wenthel Javonitalla</p></div>
+                  <img class="img-responsive img-circle img-sm" src="{{model.project.assignee.image}}" alt="Assignee Image">
+                  <p>{{model.project.assignee.name}}</p></div>
               </div>
               <div class="form-detail row with-image">
                 <label class="col-sm-3">Updated</label>
                 <div class="col-sm-9">
-                  <img class="img-responsive img-circle img-sm" src="img/user3-128x128.jpg" alt="Assignee Image">
-                  <p>Leslie Pearson</p>
+                  <img class="img-responsive img-circle img-sm" src="{{model.project.updatedBy.image}}" alt="Assignee Image">
+                  <p>{{model.project.updatedBy.name}}</p>
                 </div>
               </div>
               <div class="form-detail row with-image">
                 <label class="col-sm-3">Created</label>
                 <div class="col-sm-9">
-                  <img class="img-responsive img-circle img-sm" src="img/user3-128x128.jpg" alt="Assignee Image">
-                  <p>Leslie Pearson</p>
+                  <img class="img-responsive img-circle img-sm" src="{{model.project.createdBy.image}}" alt="Assignee Image">
+                  <p>{{model.project.createdBy.name}}</p>
                 </div>
               </div>
             </div>
@@ -338,15 +265,15 @@ Credenza:
             <div class="box-body">
               <div class="form-detail row">
                 <label class="col-sm-3">Due</label>
-                <div class="col-sm-9">May 03, 2016</div>
+                <div class="col-sm-9">{{format-timeago model.project.dueDate true}}</div>
               </div>
               <div class="form-detail row">
                 <label class="col-sm-3">Updated</label>
-                <div class="col-sm-9">04-Mar-16 10:07 AM</div>
+                <div class="col-sm-9">{{format-timeago model.project.updateDate}}</div>
               </div>
               <div class="form-detail row">
                 <label class="col-sm-3">Created</label>
-                <div class="col-sm-9">25-Jan-16 2:29 PM</div>
+                <div class="col-sm-9">{{format-timeago model.project.createdDate}}</div>
               </div>
             </div>
             <!-- /.box-body -->
