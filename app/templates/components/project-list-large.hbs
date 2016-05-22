@@ -1,36 +1,40 @@
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th>PID</th>
-    <th>Client</th>
-    <th>Name</th>
-    <th>Assignee</th>
-    <th>Hours</th>
-    <th>Office</th>
-    <th>OWP</th>
-    <th>Status</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#each projects as |project|}}
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
     <tr>
-      <td>{{project.pid}}</td>
-      <td>{{project.client}}</td>
-      <td>{{project.name}}</td>
-      <td><img class="img-responsive img-circle img-sm" src="{{project.assignee.image}}" title="{{project.assignee.name}}"></td>
-      <td>{{project.hours}}</td>
-      <td>{{project.office}}</td>
-      <td><img class="img-responsive img-circle img-sm" src="{{project.createdBy.image}}" title="{{project.createdBy.name}}"></td>
-      <td>
-        {{#if (compare project.status 'Open')}}
-          <span class="label label-warning">{{project.status}}</span>
-        {{else if (compare project.status 'Closed')}}
-          <span class="label label-success">{{project.status}}</span>
-        {{else}}
-          <span class="label label-info">{{project.status}}</span>
-        {{/if}}
-      </td>
+      <th>PID</th>
+      <th>Client</th>
+      <th>Name</th>
+      <th>Assignee</th>
+      <th>Hours</th>
+      <th>Office</th>
+      <th>OWP</th>
+      <th>Status</th>
     </tr>
-  {{/each}}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+    {{#each projects as |project|}}
+      <tr>
+        <td>{{project.pid}}</td>
+        <td>{{project.client}}</td>
+        <td>{{project.name}}</td>
+        <td><img class="img-responsive img-circle img-sm" src="{{project.assignee.image}}"
+                 title="{{project.assignee.name}}"></td>
+        <td>{{project.hours}}</td>
+        <td>{{project.office}}</td>
+        <td><img class="img-responsive img-circle img-sm" src="{{project.createdBy.image}}"
+                 title="{{project.createdBy.name}}"></td>
+        <td>
+          {{#if (compare project.status 'Open')}}
+            <span class="label label-warning">{{project.status}}</span>
+          {{else if (compare project.status 'Closed')}}
+            <span class="label label-success">{{project.status}}</span>
+          {{else}}
+            <span class="label label-info">{{project.status}}</span>
+          {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>
