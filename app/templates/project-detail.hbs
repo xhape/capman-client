@@ -21,7 +21,9 @@
               <div class="row">
                 <div class="col-md-6 form-detail row">
                   <label class="col-sm-3">PID #</label>
-                  <div class="col-sm-9">{{model.project.pid}}</div>
+                  <div class="col-sm-9">
+                    {{input-text-inline-editing value=model.project.pid}}
+                  </div>
                 </div>
                 <div class="col-md-6 form-detail row">
                   <label class="col-sm-3">Client</label>

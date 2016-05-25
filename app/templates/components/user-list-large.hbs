@@ -1,30 +1,45 @@
-<table class="table table-hover">
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>Office</th>
-    <th>Team</th>
-  </tr>
-  </thead>
-  <tbody>
-  {{#each users as |user|}}
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
     <tr>
-      <td><img class="img-responsive img-circle img-sm" src="{{user.image}}" alt="Assignee Image">{{user.name}}</td>
-      <td>{{user.office}}</td>
-      <td>
-        {{#each user.teams as |team|}}
-          {{#if (compare team 'Design')}}
-            <span class="label bg-green">{{team}}</span>
-          {{/if}}
-          {{#if (compare team 'Audit')}}
-            <span class="label bg-lime">{{team}}</span>
-          {{/if}}
-          {{#if (compare team 'Render')}}
-            <span class="label bg-aqua">{{team}}</span>
-          {{/if}}
-        {{/each}}
-      </td>
+      <th>Name</th>
+      <th>Office</th>
+      <th>Team</th>
+      <th></th>
     </tr>
-  {{/each}}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+    {{#each users as |user|}}
+      <tr>
+        <td><img class="img-responsive img-circle img-sm" src="{{user.image}}" alt="Assignee Image">{{user.name}}</td>
+        <td>{{user.office}}</td>
+        <td>
+          {{#each user.teams as |team|}}
+            {{#if (compare team 'Design')}}
+              <span class="label bg-green">{{team}}</span>
+            {{/if}}
+            {{#if (compare team 'Audit')}}
+              <span class="label bg-lime">{{team}}</span>
+            {{/if}}
+            {{#if (compare team 'Render')}}
+              <span class="label bg-aqua">{{team}}</span>
+            {{/if}}
+          {{/each}}
+        </td>
+        <td>
+        <td>
+          <div class="btn-group">
+            <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-ellipsis-v"></i></button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Edit</a></li>
+              <li><a href="#">Delete</a></li>
+            </ul>
+          </div>
+        </td>
+        </td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div>
